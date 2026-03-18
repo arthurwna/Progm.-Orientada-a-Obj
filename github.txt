@@ -1,0 +1,14 @@
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/arthurwna/Progm.-Orientada-a-Obj.git
+git push --set-upstream origin master
+
+git clone https://github.com/arthurwna/Progm.-Orientada-a-Obj.git
+
+git remote add origin https://github.com/arthurwna/Progm.-Orientada-a-Obj.git
+git pull --force
+
+git add .
+git commit -m "first commit"
+git push origin master
