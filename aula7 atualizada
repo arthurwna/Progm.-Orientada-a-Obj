@@ -1,0 +1,70 @@
+from typing import TypeVar
+
+T = TypeVar("T")
+
+class Caixa(Generic[T]):
+    def __int__(self, item: T):
+        self.item = item
+    
+    def pegar_item(self) -> T:
+        return self.item
+
+if __name__ == "__main__":
+    caixa_int = Caixa[int](42)
+    caixa_str = Caixa[str]("Python")
+    caixa_lista = Caixa[list]([1, 2, 3])
+
+    print(caixa_int.pegar_item())
+    print(caixa_str.pegar_item())
+    print(caixa_lista.pegar_item())
+
+  ##----------------
+
+print(5 + 3.14) #INT É CONVERTIDO PARA FLOAT AUTOMATICAMENTE 
+print("idade: " + str(25)) #int é convertido para str
+
+def repetir (texto, vezes:float):
+    return texto, vezes
+
+print(repetir("python" , 3))
+
+##-------------------
+
+class Animal: 
+    def fazer_som(self):
+        print("O animal faz um som...")
+
+class Cachorro(Animal):
+    def fazer_som(self):
+        print("au au au")
+
+class Gato(Animal):
+    def fazer_som(self):
+        print("miau miau")
+
+class Vaca(Animal):
+    def fazer_som(self):
+        print("Muuuu")
+
+#polimorfismo de inclusao
+def fazer.barulho_som(animal: Animal):
+    animal.fazer_som()    #chama o metodo correto de cada 
+
+    #testando
+animais = [Cachorro(), Gato(), Vaca(), Animal()]
+
+for animal in animais:
+    fazer_barulho(animal)
+
+    ##----------
+
+    class Calculadora:
+        def somar(self, a, b=None):
+            if b is None:
+                return a + animais
+            return a + b
+
+    if __name__"__main__":
+        calc = Calculadora()
+        print(calc.somar(5))
+        print(calc.somar(5,3))
